@@ -83,6 +83,9 @@ jobs:
           cp web/index.html public/index.html
           du -sh public/data
 
+      - name: Build RSS feed
+        run: python build_feed.py
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
